@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.calculatorContainer {
+  height: 75%;
+  width: 40%;
+
+  border: solid 1px lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px lightgray;
+}
+
+.display {
+  height: 20%;
+  width: 100%;
+  border: solid 1px lightgray;
+}
+
+.keyPad {
+  height: 70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4);
+  grid-template-rows: repeat(5);
+  grid-template-areas:
+      'btn7 btn8 btn9 del'
+      'btn4 btn5 btn6 plus'
+      'btn1 btn2 btn3 minus'
+      'dot btn0 divide times'
+      'reset reset equals equals';
+
+  border: solid 1px red;
+}
+
+.keyPad > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn0 {
+  grid-area: btn0;
+}
+#btn1 {
+  grid-area: btn1;
+}
+#btn2 {
+  grid-area: btn2;
+}
+#btn3 {
+  grid-area: btn3;
+}
+#btn4 {
+  grid-area: btn4;
+}
+#btn5 {
+  grid-area: btn5;
+}
+#btn6 {
+  grid-area: btn6;
+}
+#btn7 {
+  grid-area: btn7;
+}
+#btn8 {
+  grid-area: btn8;
+}
+#btn9 {
+  grid-area: btn9;
+}
+#dot {
+  grid-area: dot;
+}
+#plus {
+  grid-area: plus;
+}
+#minus {
+  grid-area: minus;
+}
+#divide {
+  grid-area: divide;
+}
+#times {
+  grid-area: times;
+}
+#del {
+  grid-area: del;
+}
+#reset {
+  grid-area: reset;
+}
+#equals {
+  grid-area: equals;
 }

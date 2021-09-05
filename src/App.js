@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { createThemes } from './styles/themes.js'
 import './App.css';
 
 function App() {
 
+const theme = createThemes()
 const dotRef = React.useRef()
 const displayRef = React.useRef()
 
@@ -11,6 +13,7 @@ const [previousNumber, setPreviousNumber] = useState('')
 const [currentNumber, setCurrentNumber] = useState('')
 const [operation, setOperation] = useState('')
 const [dotOK, setDotOK] = useState(true)
+const [style, setStyle] = useState([])
 
 let tempNumBtnArr = []
 
@@ -90,7 +93,7 @@ let tempNumBtnArr = []
 
       const equals = () => {
         calculate('')
-        
+
       }
 
 
@@ -123,13 +126,31 @@ useEffect(() => {
 }, [])
 
 
+
+      const getThemeOne = () => {
+        setStyle(theme.one)
+      }
+
+      const getThemeTwo = () => {
+        setStyle(theme.two)
+      }
+
+      const getThemeThree = () => {
+        setStyle(theme.three)
+      }
+console.log(style[0])
   return (
-    <main>
+    <main style={style[0]} className='parent'>
         <div className='calculatorContainer'>
-          <header>
-          <span className='title'>calc</span>
-          <div className='themeSwitch'>theme switch</div>
-          </header>
+
+        <header>
+            <span className='title'>calc</span>
+            <div className='themeSwitch'>
+                <button onClick={()=> getThemeOne()}>1</button>
+                <button onClick={()=> getThemeTwo()}>2</button>
+                <button onClick={()=> getThemeThree()}>3</button>
+            </div>
+        </header>
 
           <div ref={displayRef} className='display'>
             {previousNumber}{currentNumber}
@@ -139,7 +160,7 @@ useEffect(() => {
             <div id='del' onClick={()=> backSpace()}>DEL</div>
             {
               numberButtons.map(btn=> {
-                return <button
+                return <button style={style[1]}
                           key={btn.id}
                           id={btn.id}
                           onClick={()=> displayChar(btn.value)}
@@ -149,6 +170,7 @@ useEffect(() => {
               })
             }
             <button
+              style={style[1]}
               id='dot'
               ref={dotRef}
               onClick={() => {
@@ -160,10 +182,10 @@ useEffect(() => {
               dotOK ? '.' : ' . '
             }
             </button>
-            <button id='plus' onClick={()=> selectOperation('+')}>+</button>
-            <button id='minus' onClick={()=> selectOperation('-')}>-</button>
-            <button id='times' onClick={()=> selectOperation('x')}>x</button>
-            <button id='divide' onClick={()=> selectOperation('/')}>/</button>
+            <button style={style[1]} id='plus' onClick={()=> selectOperation('+')}>+</button>
+            <button style={style[1]} id='minus' onClick={()=> selectOperation('-')}>-</button>
+            <button style={style[1]} id='times' onClick={()=> selectOperation('x')}>x</button>
+            <button style={style[1]} id='divide' onClick={()=> selectOperation('/')}>/</button>
             <div id='reset' onClick={()=> reset()}>RESET</div>
             <div id='equals' onClick={()=> equals()}>=</div>
           </div>

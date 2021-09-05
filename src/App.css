@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Lato', sans-serif;
 }
 
 
@@ -16,7 +22,7 @@ main {
 
 .calculatorContainer {
   height: 75%;
-  width: 40%;
+  width: 25rem;
 
   border: solid 1px lightgray;
 }
@@ -30,32 +36,58 @@ header {
   border: solid 1px lightgray;
 }
 
+.title {
+  font-size: 1.5rem;
+}
+
 .display {
   height: 20%;
   width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 3rem;
   border: solid 1px lightgray;
 }
 
 .keyPad {
   height: 70%;
   width: 100%;
+  padding: .8rem;
   display: grid;
-  grid-template-columns: repeat(4);
-  grid-template-rows: repeat(5);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
       'btn7 btn8 btn9 del'
       'btn4 btn5 btn6 plus'
       'btn1 btn2 btn3 minus'
       'dot btn0 divide times'
       'reset reset equals equals';
+  grid-gap: .5rem;
 
-  border: solid 1px red;
 }
 
 .keyPad > div {
+  height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+  border: solid 1px gray;
+  border-bottom: solid .3rem blue;
+  border-radius: .7rem;
+}
+
+.keyPad > button {
+  height: 75%;
+  font-size: 2rem;
+  background: none;
+  border: none;
+
+  border-radius: .7rem;
+
 }
 
 #btn0 {

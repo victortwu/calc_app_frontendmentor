@@ -24,7 +24,7 @@ main {
   height: 75%;
   width: 25rem;
 
-  border: solid 1px lightgray;
+
 }
 
 header {
@@ -33,7 +33,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px lightgray;
+
 }
 
 .title {
@@ -41,21 +41,22 @@ header {
 }
 
 .display {
-  height: 20%;
+  height: 16%;
   width: 100%;
+  margin-bottom: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   font-size: 3rem;
-  border: solid 1px lightgray;
+  border-radius: .5rem;
 }
 
 .keyPad {
   height: 70%;
   width: 100%;
-  padding: .8rem;
+  padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -66,7 +67,7 @@ header {
       'dot btn0 divide times'
       'reset reset equals equals';
   grid-gap: .5rem;
-
+  border-radius: .5rem;
 }
 
 .keyPad > div {
@@ -75,8 +76,6 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  border: solid 1px gray;
-  border-bottom: solid .3rem blue;
   border-radius: .7rem;
 }
 
@@ -85,9 +84,7 @@ header {
   font-size: 2rem;
   background: none;
   border: none;
-
   border-radius: .7rem;
-
 }
 
 #btn0 {
@@ -143,4 +140,12 @@ header {
 }
 #equals {
   grid-area: equals;
+}
+
+.attribution {
+  color: lightgray
+}
+
+.attribution > a {
+  color: gray;
 }

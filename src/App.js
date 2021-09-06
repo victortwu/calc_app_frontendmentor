@@ -140,27 +140,27 @@ useEffect(() => {
       }
 console.log(style[0])
   return (
-    <main style={style[0]} className='parent'>
+    <main style={style[2]} className='parent'>
         <div className='calculatorContainer'>
 
         <header>
-            <span className='title'>calc</span>
+            <span style={style[0]} className='title'>calc</span>
             <div className='themeSwitch'>
-                <button onClick={()=> getThemeOne()}>1</button>
-                <button onClick={()=> getThemeTwo()}>2</button>
-                <button onClick={()=> getThemeThree()}>3</button>
+                <button style={style[1]} onClick={()=> getThemeOne()}>1</button>
+                <button style={style[1]} onClick={()=> getThemeTwo()}>2</button>
+                <button style={style[1]} onClick={()=> getThemeThree()}>3</button>
             </div>
         </header>
 
-          <div ref={displayRef} className='display'>
+          <div style={style[3]} ref={displayRef} className='display'>
             {previousNumber}{currentNumber}
           </div>
 
-          <div className='keyPad'>
-            <div id='del' onClick={()=> backSpace()}>DEL</div>
+          <div style={style[4]} className='keyPad'>
+            <div style={style[6]} id='del' onClick={()=> backSpace()}>DEL</div>
             {
               numberButtons.map(btn=> {
-                return <button style={style[1]}
+                return <button style={style[5]}
                           key={btn.id}
                           id={btn.id}
                           onClick={()=> displayChar(btn.value)}
@@ -170,7 +170,7 @@ console.log(style[0])
               })
             }
             <button
-              style={style[1]}
+              style={style[5]}
               id='dot'
               ref={dotRef}
               onClick={() => {
@@ -182,12 +182,12 @@ console.log(style[0])
               dotOK ? '.' : ' . '
             }
             </button>
-            <button style={style[1]} id='plus' onClick={()=> selectOperation('+')}>+</button>
-            <button style={style[1]} id='minus' onClick={()=> selectOperation('-')}>-</button>
-            <button style={style[1]} id='times' onClick={()=> selectOperation('x')}>x</button>
-            <button style={style[1]} id='divide' onClick={()=> selectOperation('/')}>/</button>
-            <div id='reset' onClick={()=> reset()}>RESET</div>
-            <div id='equals' onClick={()=> equals()}>=</div>
+            <button style={style[5]} id='plus' onClick={()=> selectOperation('+')}>+</button>
+            <button style={style[5]} id='minus' onClick={()=> selectOperation('-')}>-</button>
+            <button style={style[5]} id='times' onClick={()=> selectOperation('x')}>x</button>
+            <button style={style[5]} id='divide' onClick={()=> selectOperation('/')}>/</button>
+            <div style={style[6]} id='reset' onClick={()=> reset()}>RESET</div>
+            <div style={style[7]} id='equals' onClick={()=> equals()}>=</div>
           </div>
 
 

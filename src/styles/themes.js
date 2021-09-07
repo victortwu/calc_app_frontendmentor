@@ -31,19 +31,19 @@ const c2 = {
 }
 
 const c3 = {
-    numBtnBgLightGray: '#eae3db',
-    numBtnBorderGray: '#b5a499',
-    numBtnFontGray: '#484b58',
-    resetDelBgGray: '#647299',
-    resetDelBorderGray: '#414d74',
-    equalsBgRed: '#d13f30',
-    equalsBorderRed: '#942316',
-    resEqFontWhite: '#fafbff',
-    titleFontWhite: '#feffff',
-    displayBgBlack: '#181f32',
-    displayFontWhite: '#fdfefe',
-    keypadBgGray: '#252d45',
-    bodyBgGray: '#3b4664',
+    numBtnBgPurple: '#331b4d',
+    numBtnBorderLightPurple: '#84209c',
+    numBtnFontYellow: '#fee33b',
+    resetDelBgPurple: '#56077c',
+    resetDelBorderPurple: '#bf15f4',
+    equalsBgNeonBlue: '#00decf',
+    equalsBorderNeonBlue: '#00decf',
+    resEqFontWhite: '#fff6ff',
+    titleFontYellow: '#fee33b',
+    displayBgDarkPurple: '#1e0836',
+    displayFontYellow: '#fee33b',
+    keypadBgDarkPurple: '#1e0836',
+    bodyBgDark: '#17062a',
 }
 
 
@@ -122,36 +122,37 @@ export const createThemes = () => {
     ],
     three : [
       {//title
-        color: '',
+        color: c3.titleFontYellow,
       },
       {//toggleSlider
-        backgroundColor: '',
-        color: '',
+        backgroundColor: c3.equalsBgNeonBlue,
+        color: c3.titleFontYellow,
       },
       {//main
-        backgroundColor: '',
+        backgroundColor: c3.bodyBgDark,
+        transition: '.4s'
       },
       {//display
-        backgroundColor: '',
-        color: '',
+        backgroundColor: c3.displayBgDarkPurple,
+        color: c3.titleFontYellow,
       },
       {//kepad
-        backgroundColor: '',
+        backgroundColor: c3.keypadBgDarkPurple,
       },
       {//numberButtons
-        backgroundColor: '',
-        color: '',
-        borderBottom: 'solid .3rem '
+        backgroundColor: c3.numBtnBgPurple,
+        color: c3.numBtnFontYellow,
+        borderBottom: `solid .3rem ${c3.numBtnBorderLightPurple}`
       },
       {//reset, delete
-        backgroundColor: '',
-        color: '',
-        borderBottom: 'solid .3rem '
+        backgroundColor: c3.resetDelBgPurple,
+        color: c3.resEqFontWhite,
+        borderBottom: `solid .3rem ${c3.resetDelBorderPurple}`
       },
       {//equals
-        backgroundColor: '',
-        color: '',
-        borderBottom: 'solid .3rem '
+        backgroundColor: c3.equalsBgNeonBlue,
+        color: '#003f40',
+        borderBottom: `solid .3rem #7af1ef`
       },
     ],
   }

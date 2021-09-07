@@ -121,8 +121,10 @@ let tempNumBtnArr = []
 
 
 useEffect(() => {
+
   addNumberButtons()
   setNumberButtons(tempNumBtnArr)
+  getThemeOne()
 }, [])
 
 

@@ -121,36 +121,22 @@ let tempNumBtnArr = []
 
 
 useEffect(() => {
-
   addNumberButtons()
   setNumberButtons(tempNumBtnArr)
-  getThemeOne()
+  setStyle(theme.one)
 }, [])
 
 
-
-      const getThemeOne = () => {
-        setStyle(theme.one)
-      }
-
-      const getThemeTwo = () => {
-        setStyle(theme.two)
-      }
-
-      const getThemeThree = () => {
-        setStyle(theme.three)
-      }
-console.log(style[0])
-  return (
+return (
     <main style={style[2]} className='parent'>
         <div className='calculatorContainer'>
 
         <header>
             <span style={style[0]} className='title'>calc</span>
             <div className='themeSwitch'>
-                <button style={style[1]} onClick={()=> getThemeOne()}>1</button>
-                <button style={style[1]} onClick={()=> getThemeTwo()}>2</button>
-                <button style={style[1]} onClick={()=> getThemeThree()}>3</button>
+                <button style={style[1]} onClick={()=> setStyle(theme.one)}>1</button>
+                <button style={style[1]} onClick={()=> setStyle(theme.two)}>2</button>
+                <button style={style[1]} onClick={()=> setStyle(theme.three)}>3</button>
             </div>
         </header>
 
@@ -197,7 +183,7 @@ console.log(style[0])
         <footer>
             <div className="attribution">
               Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="none">Frontend Mentor</a>.
-              Coded by <a href="#">Victor Twu</a>.
+              Coded by <a href="https://victor-twu-portfolio.herokuapp.com/" target="none">Victor Twu</a>.
             </div>
         </footer>
     </main>

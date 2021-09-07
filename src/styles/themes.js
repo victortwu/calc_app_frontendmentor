@@ -1,3 +1,6 @@
+// color objects
+
+
 const c1 = {
     numBtnBgLightGray: '#eae3db',
     numBtnBorderGray: '#b5a499',
@@ -65,9 +68,11 @@ export const createThemes = () => {
       {//display
         backgroundColor: c1.displayBgBlack,
         color: c1.displayFontWhite,
+        transition: '.4s'
       },
       {//kepad
         backgroundColor: c1.keypadBgGray,
+        transition: '.4s'
       },
       {//numberButtons
         backgroundColor: c1.numBtnBgLightGray,
@@ -100,9 +105,11 @@ export const createThemes = () => {
       {//display
         backgroundColor: c2.displayBgWhite,
         color: c2.displayFontBlack,
+        transition: '.4s'
       },
       {//kepad
         backgroundColor: c2.keypadBgGray,
+        transition: '.4s'
       },
       {//numberButtons
         backgroundColor: c2.numBtnBgWhite,
@@ -135,9 +142,11 @@ export const createThemes = () => {
       {//display
         backgroundColor: c3.displayBgDarkPurple,
         color: c3.titleFontYellow,
+        transition: '.4s'
       },
       {//kepad
         backgroundColor: c3.keypadBgDarkPurple,
+        transition: '.4s'
       },
       {//numberButtons
         backgroundColor: c3.numBtnBgPurple,

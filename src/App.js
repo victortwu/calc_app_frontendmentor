@@ -7,7 +7,6 @@ function App() {
 const theme = createThemes()
 const dotRef = React.useRef()
 const displayRef = React.useRef()
-const sliderRef = React.useRef()
 
 const [numberButtons, setNumberButtons] = useState([])
 const [previousNumber, setPreviousNumber] = useState('')
@@ -133,11 +132,17 @@ return (
     <main style={style[2]} className='parent'>
         <div className='calculatorContainer'>
 
-        <header>
-            <span style={style[0]} className='title'>calc</span>
+        <header style={style[0]}>
+            <span className='title'>calc</span>
+            <div className='switchLabel'>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
             <div className='themeSwitch'>
+                  THEME
               <div style={style[1]} className='slider'>
-                <div ref={sliderRef} style={style[8]} className='sliderSwitch'/>
+                <div style={style[8]} className='sliderSwitch'/>
                 <button style={style[9]} onClick={()=>setStyle(theme.one)}>{''}</button>
                 <button style={style[9]} onClick={()=>setStyle(theme.two)}>{''}</button>
                 <button style={style[9]} onClick={()=>setStyle(theme.three)}>{''}</button>

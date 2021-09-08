@@ -28,16 +28,34 @@ main {
 }
 
 header {
+  position: relative;
   height: 10%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.switchLabel{
+  position: absolute;
+  top: 3%;
+  right: .1rem;
+  width: 3.3rem;
+  font-size: .7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.themeSwitch {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .7rem;
 }
 
 .slider {
@@ -55,6 +73,10 @@ header {
   height: .8rem;
   background: none;
   border: none;
+}
+
+.slider > button:hover {
+  cursor: pointer;
 }
 
 .sliderSwitch {
@@ -77,10 +99,12 @@ header {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-
+  flex-wrap: wrap;
   font-size: 3rem;
   border-radius: .5rem;
 }
+
+
 
 .keyPad {
   height: 70%;
@@ -122,6 +146,15 @@ header {
   cursor: pointer;
   opacity: .7;
   transition: .3s;
+}
+
+.attribution {
+  font-size: .7rem;
+  color: lightgray
+}
+
+.attribution > a {
+  color: gray;
 }
 
 #btn0 {
@@ -179,14 +212,7 @@ header {
   grid-area: equals;
 }
 
-.attribution {
-  font-size: .7rem;
-  color: lightgray
-}
 
-.attribution > a {
-  color: gray;
-}
 
 
 

@@ -57,9 +57,8 @@ export const createThemes = () => {
       {//title
         color: c1.titleFontWhite,
       },
-      {//toggleSlider
-        backgroundColor: c1.equalsBgRed,
-        color: c1.titleFontWhite,
+      {//toggle slot
+        backgroundColor: c1.keypadBgGray,
       },
       {//main
         backgroundColor: c1.bodyBgGray,
@@ -89,14 +88,17 @@ export const createThemes = () => {
         color: c1.resEqFontWhite,
         borderBottom: `solid .3rem ${c1.equalsBorderRed}`
       },
+      {//themeSwitch
+        backgroundColor: c1.equalsBgRed,
+        left: '.2rem'
+      },
     ],
     two : [
       {//title
         color: c2.titleFontBlack,
       },
-      {//toggleSlider
-        backgroundColor: c2.equalsBgOrange,
-        color: c2.titleFontBlack,
+      {//toggle slot
+        backgroundColor: c2.keypadBgGray,
       },
       {//main
         backgroundColor: c2.bodyBgGray,
@@ -126,14 +128,17 @@ export const createThemes = () => {
         color: c2.resEqFontWhite,
         borderBottom: `solid .3rem ${c2.equalsBorderRed}`
       },
+      {//themeSwitch
+        backgroundColor: c2.equalsBgOrange,
+        left: '1.4rem'
+      },
     ],
     three : [
       {//title
         color: c3.titleFontYellow,
       },
-      {//toggleSlider
-        backgroundColor: c3.equalsBgNeonBlue,
-        color: c3.titleFontYellow,
+      {//toggle slot
+        backgroundColor: c3.keypadBgDarkPurple,
       },
       {//main
         backgroundColor: c3.bodyBgDark,
@@ -162,6 +167,10 @@ export const createThemes = () => {
         backgroundColor: c3.equalsBgNeonBlue,
         color: '#003f40',
         borderBottom: `solid .3rem #7af1ef`
+      },
+      {//themeSwitch
+        backgroundColor: c3.equalsBgNeonBlue,
+        left: '2.5rem'
       },
     ],
   }

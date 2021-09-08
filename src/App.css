@@ -25,8 +25,6 @@ main {
 .calculatorContainer {
   height: 75%;
   width: 25rem;
-
-
 }
 
 header {
@@ -41,6 +39,34 @@ header {
 .title {
   font-size: 1.5rem;
 }
+
+.slider {
+  position: relative;
+  height: 1.5rem;
+  width: 3.5rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider > button {
+  width: .8rem;
+  height: .8rem;
+  background: none;
+  border: none;
+}
+
+.sliderSwitch {
+  position: absolute;
+  left: 0rem;
+  bottom: 0.3rem;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+}
+
+
 
 .display {
   height: 16%;
@@ -161,6 +187,8 @@ header {
 .attribution > a {
   color: gray;
 }
+
+
 
 @media screen and (max-width: 500px) {
   .main {

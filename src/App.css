@@ -96,12 +96,25 @@ header {
   margin-bottom: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 3rem;
   border-radius: .5rem;
+}
+
+.displayP {
+  padding: 1.5rem 0;
+  height: 100%;
+  width: 100%;
+  font-size: 3rem;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.shrinkFontDisplay {
+  padding-top: 1.5rem;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: right;
+  word-wrap: break-word;
 }
 
 
@@ -212,14 +225,13 @@ header {
   grid-area: equals;
 }
 
-
-
-
-
 @media screen and (max-width: 500px) {
   .main {
     height: 100vh;
     width: 100vh;
+  }
+  .displayP {
+    padding-top: 2.5rem;
   }
   .calculatorContainer{
     height: 95%;

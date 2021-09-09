@@ -6,7 +6,7 @@ function App() {
 
 const theme = createThemes()
 const dotRef = React.useRef()
-const displayRef = React.useRef()
+const displayRef = React.useRef('')
 
 const [numberButtons, setNumberButtons] = useState([])
 const [previousNumber, setPreviousNumber] = useState('')
@@ -127,6 +127,13 @@ useEffect(() => {
   setStyle(theme.one)
 }, [])
 
+const htmlLength = !displayRef.current.innerHTML
+                  ? false
+                  : displayRef.current.innerHTML.length
+
+const dynamicFontSize = (htmlLength && htmlLength > 12)
+                        ? 'shrinkFontDisplay'
+                        : 'displayP'
 
 return (
     <main style={style[2]} className='parent'>
@@ -150,8 +157,8 @@ return (
             </div>
         </header>
 
-          <div style={style[3]} ref={displayRef} className='display'>
-            {previousNumber}{currentNumber}
+          <div style={style[3]} className='display'>
+            <p ref={displayRef} className={dynamicFontSize}>{previousNumber}{currentNumber}</p>
           </div>
 
           <div style={style[4]} className='keyPad'>
